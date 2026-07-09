@@ -208,7 +208,7 @@ After the CTF there were some shenanigans on the TeamSpeak server...
 
 Bad Apple was made using usernames, and it's beautiful...
 
-{{< video src="/badapple.mp4" type="video/mp4" >}}
+{{< video src="/25-damctf-badapple.mp4" type="video/mp4" >}}
 
 
 
