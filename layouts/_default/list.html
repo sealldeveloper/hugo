@@ -4,7 +4,17 @@
   {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
   {{ if or (eq .Section "blog") (eq .Section "writeups") }}
     <div class="search-panel">
-      <input id="search-input" type="search" placeholder="Search {{ .Title | lower }}..." aria-label="Search {{ .Title }}">
+      {{ $placeholder := printf "Search %s..." (lower .Title) }}
+      {{ if or (eq .Section "writeups") (eq .Section "blog") }}
+        {{ $visiblePages := where .Pages "Params.hidden" "!=" true }}
+        {{ $totalWords := 0 }}
+        {{ range $visiblePages }}{{ $totalWords = add $totalWords .WordCount }}{{ end }}
+        {{ $formattedWords := lang.FormatNumberCustom 0 (float $totalWords) }}
+        {{ $noun := "writeups" }}
+        {{ if eq .Section "blog" }}{{ $noun = "blogs" }}{{ end }}
+        {{ $placeholder = printf "search through %d %s of %s words..." (len $visiblePages) $noun $formattedWords }}
+      {{ end }}
+      <input id="search-input" type="search" placeholder="{{ $placeholder }}" aria-label="Search {{ .Title }}">
       <div class="filter-row" data-filter-group="section">
         <button class="filter-button active" data-filter-type="section" data-filter="">All</button>
         {{ $sections := slice }}
