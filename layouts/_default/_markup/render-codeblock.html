@@ -16,5 +16,9 @@
 {{ with $eyeLines }}{{ $classes = $classes | append "codeblock-eyes" }}{{ end }}
 <div class="{{ delimit $classes " " }}"{{ with $eyeLines }} data-eye-lines="{{ printf "%v" . }}"{{ end }}{{ with $jsonFormatValue }} data-json-format="{{ . }}"{{ end }}>
   {{ with $lang }}<div class="codeblock-lang">{{ . }}</div>{{ end }}
-  {{ transform.Highlight .Inner $lang "lineNos=false,noClasses=false,style=dracula" }}
+  {{ $highlighted := transform.Highlight .Inner $lang "lineNos=false,noClasses=false,style=dracula" }}
+  {{ if not (strings.Contains $highlighted "chroma") }}
+    {{ $highlighted = transform.Highlight .Inner "text" "lineNos=false,noClasses=false,style=dracula" }}
+  {{ end }}
+  {{ $highlighted }}
 </div>
