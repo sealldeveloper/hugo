@@ -1,0 +1,143 @@
+[
+  {
+    "name": "BSides Canberra",
+    "placements": [
+      {
+        "teamName": "Emu Exploit",
+        "year": 2025,
+        "globalPlacement": 1,
+        "totalTeams": 388
+      }
+    ],
+    "_slug": "bsidescbr"
+  },
+  {
+    "name": "Australian Cyber Security Games",
+    "placements": [
+      {
+        "teamName": "MQCyberSec",
+        "year": 2024,
+        "globalPlacement": 1,
+        "totalTeams": 45
+      }
+    ],
+    "_slug": "cysea"
+  },
+  {
+    "name": "DownUnder CTF",
+    "placements": [
+      {
+        "year": 2025,
+        "globalPlacement": 15,
+        "australiaPlacement": 1,
+        "totalTeams": 1667,
+        "teamName": "Emu Exploit"
+      }
+    ],
+    "_slug": "ductf"
+  },
+  {
+    "name": "HackTheBox Business CTF",
+    "placements": [
+      {
+        "year": 2025,
+        "globalPlacement": 15,
+        "totalTeams": 796,
+        "australiaPlacement": 1,
+        "teamName": "TantoSec"
+      }
+    ],
+    "_slug": "htbbusiness"
+  },
+  {
+    "name": "HackTheBox CTF",
+    "placements": [
+      {
+        "year": 2025,
+        "globalPlacement": 4,
+        "totalTeams": 4038,
+        "teamName": "thehackerscrew"
+      }
+    ],
+    "_slug": "htbctf"
+  },
+  {
+    "name": "Hack the Harbour",
+    "placements": [
+      {
+        "year": 2026,
+        "globalPlacement": 2,
+        "totalTeams": 80,
+        "teamName": "Just me :3"
+      }
+    ],
+    "_slug": "hacktheharbour"
+  },
+  {
+    "name": "HackTheBox University CTF",
+    "placements": [
+      {
+        "year": 2024,
+        "globalPlacement": 49,
+        "totalTeams": 1128,
+        "australiaPlacement": 1,
+        "teamName": "MQCyberSec"
+      }
+    ],
+    "_slug": "htbunictf"
+  },
+  {
+    "name": "International Cybersecurity Challenge",
+    "placements": [
+      {
+        "year": 2025,
+        "globalPlacement": 4,
+        "totalTeams": 8,
+        "teamName": "Team Oceania"
+      },
+      {
+        "year": 2026,
+        "globalPlacement": 3,
+        "totalTeams": 7,
+        "teamName": "Team Oceania"
+      }
+    ],
+    "_slug": "icc"
+  },
+  {
+    "name": "MapnaCTF",
+    "placements": [
+      {
+        "year": 2024,
+        "globalPlacement": 2,
+        "totalTeams": 685,
+        "teamName": "IrisSec"
+      }
+    ],
+    "_slug": "mapnactf"
+  },
+  {
+    "name": "UNSW SecSoc's SCONES",
+    "placements": [
+      {
+        "year": 2024,
+        "globalPlacement": 1,
+        "totalTeams": 61,
+        "teamName": "Just me :3"
+      },
+      {
+        "year": 2025,
+        "globalPlacement": 1,
+        "totalTeams": 74,
+        "teamName": "Emu Exploit"
+      },
+      {
+        "year": 2026,
+        "globalPlacement": 1,
+        "totalTeams": 60,
+        "teamName": "Emu Exploit"
+      }
+    ],
+    "_slug": "scones"
+  }
+]

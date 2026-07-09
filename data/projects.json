@@ -1,0 +1,76 @@
+[
+  {
+    "name": "pywtf",
+    "owner": "sealldeveloper",
+    "description": "Obfuscate any Python with only built-in functions",
+    "date": "2025-07-24",
+    "languages": [
+      "Python"
+    ],
+    "blogPost": "/blog/pywtf/"
+  },
+  {
+    "name": "overthewire-bandit-1todone",
+    "owner": "sealldeveloper",
+    "description": "OverTheWire Bandit wargame levels automated with Paramiko and Bash one-liners",
+    "date": "2025-08-20",
+    "languages": [
+      "Bash",
+      "Python"
+    ]
+  },
+  {
+    "name": "ctf-ticket-tool",
+    "owner": "sealldeveloper",
+    "description": "A discord bot for running CTFs to have better ticket organisation for admins and pings for the right people",
+    "date": "2024-06-11",
+    "languages": [
+      "Python"
+    ]
+  },
+  {
+    "name": "ctf-team-tool",
+    "owner": "sealldeveloper",
+    "description": "A discord bot to create channel and categories for a CTF teams when participating, as well as a general react role",
+    "date": "2024-09-04",
+    "languages": [
+      "Python"
+    ]
+  },
+  {
+    "name": "webfishing-save-editor",
+    "owner": "sealldeveloper",
+    "description": "Save file editor for the Webfishing game",
+    "date": "2024-11-14",
+    "languages": [
+      "Python"
+    ]
+  },
+  {
+    "name": "rust-stalker",
+    "owner": "sealldeveloper",
+    "description": "A Discord bot for tracking players on Battlemetrics and Steam across Rust servers",
+    "date": "2024-11-18",
+    "languages": [
+      "Python"
+    ]
+  },
+  {
+    "name": "gallagher-card-hacking",
+    "owner": "sealldeveloper",
+    "description": "A working PoC of the Gallagher card exploit documented at Kawaiicon 2019",
+    "date": "2025-05-01",
+    "languages": [
+      "Python"
+    ]
+  },
+  {
+    "name": "lichess-detailed-moves",
+    "owner": "sealldeveloper",
+    "description": "UserScript that shows chess.com move ratings on lichess.org",
+    "date": "2023-04-21",
+    "languages": [
+      "JavaScript"
+    ]
+  }
+]

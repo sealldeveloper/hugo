@@ -1,0 +1,23 @@
+<footer class="site-footer">
+  <div class="footer-bg">
+    <canvas id="footer-grid-canvas" data-images="{{ range $i, $seal := site.Data.seals }}{{ if $i }},{{ end }}{{ $seal.image }}{{ end }}"></canvas>
+  </div>
+  <div class="footer-inner">
+    <ul class="socials">
+      <li><a href="https://twitter.com/sealldev" aria-label="Twitter">{{ partial "icon.html" (dict "name" "twitter") }}</a></li>
+      <li><a href="https://github.com/sealldeveloper" aria-label="GitHub">{{ partial "icon.html" (dict "name" "github") }}</a></li>
+      <li><a href="https://discordapp.com/users/630874656198361099" aria-label="Discord">{{ partial "icon.html" (dict "name" "discord") }}</a></li>
+      <li><a href="https://www.linkedin.com/in/noah-cooper-5442ab309/" aria-label="LinkedIn">{{ partial "icon.html" (dict "name" "linkedin") }}</a></li>
+      <li><a href="/contact/" aria-label="Email">{{ partial "icon.html" (dict "name" "mail") }}</a></li>
+    </ul>
+    <div class="footer-divider-wrap">
+      <img class="footer-gif" src="/assets/footer.gif" alt="Footer decoration" loading="eager">
+      <hr>
+    </div>
+    <nav class="footer-nav">{{ partial "nav.html" . }}</nav>
+    <div class="footer-bottom">
+      <small>© Copyright sealldev {{ now.Year }}</small>
+      <small>Made by <a href="https://seall.dev">sealldev</a> | <a href="https://github.com/sealldeveloper/sealldev-astro">Source Code</a></small>
+    </div>
+  </div>
+</footer>

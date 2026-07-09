@@ -1,0 +1,100 @@
+{{ define "main" }}
+<section class="content-section" id="ctfs">
+  <h1 class="gradient-text">CTFs</h1>
+  <p class="lead">I've played in many <span class="text-primary">CTF</span> competitions, these are some I feel I did enough work in to list.</p>
+  {{ $years := slice }}
+  {{ range site.Data.placements }}{{ $years = $years | append .year }}{{ end }}
+  <div class="ctf-container">
+    {{ range sort (uniq $years) "value" "desc" }}
+      {{ $year := . }}
+      <section class="ctf-year-strip">
+        <header class="ctf-year-head"><h2>{{ $year }}</h2></header>
+        <div class="ctf-strip-list">
+          {{ range where site.Data.placements "year" $year }}
+            {{ $placement := . }}
+            <article class="ctf-strip-card {{ if or (eq .globalPlacement 1) (and (gt .globalPlacement 3) (eq .australiaPlacement 1)) }}ctf-strip-card-gold{{ else if or (eq .globalPlacement 2) (and (gt .globalPlacement 3) (eq .australiaPlacement 2)) }}ctf-strip-card-silver{{ else if or (eq .globalPlacement 3) (and (gt .globalPlacement 3) (eq .australiaPlacement 3)) }}ctf-strip-card-bronze{{ end }}">
+              <div class="ctf-strip-main">
+                <h3>{{ .name }}</h3>
+                {{ with .teamName }}
+                  {{ if $placement.team.url }}
+                    <a class="ctf-team" style="color: {{ $placement.team.color }}" href="{{ $placement.team.url }}">
+                      {{ partial "icon.html" (dict "name" "users" "class" "svg-icon tiny") }}
+                      <span>{{ . }}</span>
+                    </a>
+                  {{ else }}
+                    <span class="ctf-team ctf-team-static">
+                      {{ partial "icon.html" (dict "name" "users" "class" "svg-icon tiny") }}
+                      <span>{{ . }}</span>
+                    </span>
+                  {{ end }}
+                {{ end }}
+              </div>
+              <div class="ctf-rank">
+                {{ with .australiaPlacement }}<span class="ctf-rank-pill ctf-rank-au ctf-rank-au-{{ . }}">{{ partial "au-flag.html" . }}<span>AU #{{ . }}</span></span>{{ end }}
+                <span class="ctf-rank-pill ctf-rank-global ctf-rank-global-{{ .globalPlacement }}">#{{ .globalPlacement }}{{ with .totalTeams }} / {{ . }}{{ end }}</span>
+              </div>
+            </article>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  </div>
+</section>
+
+<section class="content-section alt" id="talks">
+  <h1 class="gradient-text">Talks</h1>
+  <p class="lead">Talks and workshops I have presented.</p>
+  <div class="card-grid talks-grid">
+    {{ range sort site.Data.talks "year" "desc" }}
+      {{ $talk := . }}
+      <article class="content-card talk-card">
+        <div class="video-frame">{{ with .embed }}<iframe src="{{ . }}" title="{{ $talk.title }}" loading="lazy" allowfullscreen></iframe>{{ else }}{{ with .image }}<img src="{{ . }}" alt="">{{ else }}<span>No preview available</span>{{ end }}{{ end }}</div>
+        <div class="card-body">
+          <div class="card-meta">{{ .event }} · {{ .year }}</div>
+          <h2>{{ .title }}</h2>
+          {{ with .speakers }}<p>{{ . }}</p>{{ end }}
+          <a class="inline-action" href="{{ .url }}">{{ partial "icon.html" (dict "name" "play" "class" "svg-icon small") }}<span>Watch</span></a>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+</section>
+
+<section class="content-section" id="projects">
+  <h1 class="gradient-text">Projects</h1>
+  <p class="lead">Stuff I have made on GitHub.</p>
+  <div class="card-grid project-grid">
+    {{ range sort site.Data.projects "date" "desc" }}
+      <article class="content-card repo-card">
+        <div class="card-body">
+          <div class="repo-card-head">
+            <h2><a href="https://github.com/{{ .owner }}/{{ .name }}">{{ .name }}</a></h2>
+            <a class="icon-link" href="https://github.com/{{ .owner }}/{{ .name }}" aria-label="View {{ .name }} on GitHub">{{ partial "icon.html" (dict "name" "external") }}</a>
+          </div>
+          <p>{{ .description }}</p>
+          <div class="repo-card-footer">
+            {{ $languageCount := len .languages }}
+            {{ if gt $languageCount 0 }}
+              <div class="repo-language-panel">
+                <div class="repo-language-bar">
+                  {{ range .languages }}
+                    {{ $color := index (dict "JavaScript" "#f1e05a" "TypeScript" "#2b7489" "Python" "#3572A5" "Java" "#b07219" "C++" "#f34b7d" "C" "#555555" "Go" "#00ADD8" "Rust" "#dea584" "PHP" "#4F5D95" "Ruby" "#701516" "Swift" "#ffac45" "Kotlin" "#F18E33" "HTML" "#e34c26" "CSS" "#1572B6" "Shell" "#89e051" "Bash" "#89e051" "Astro" "#ff5d01" "Vue" "#4FC08D" "React" "#61DAFB" "Svelte" "#ff3e00") . | default "#858585" }}
+                    <span style="width: {{ div 100.0 $languageCount }}%; background-color: {{ $color }};" title="{{ . }}: {{ printf "%.1f" (div 100.0 $languageCount) }}%"></span>
+                  {{ end }}
+                </div>
+                <div class="repo-language-list">
+                  {{ range .languages }}
+                    {{ $color := index (dict "JavaScript" "#f1e05a" "TypeScript" "#2b7489" "Python" "#3572A5" "Java" "#b07219" "C++" "#f34b7d" "C" "#555555" "Go" "#00ADD8" "Rust" "#dea584" "PHP" "#4F5D95" "Ruby" "#701516" "Swift" "#ffac45" "Kotlin" "#F18E33" "HTML" "#e34c26" "CSS" "#1572B6" "Shell" "#89e051" "Bash" "#89e051" "Astro" "#ff5d01" "Vue" "#4FC08D" "React" "#61DAFB" "Svelte" "#ff3e00") . | default "#858585" }}
+                    <span><i style="background-color: {{ $color }}"></i>{{ . }}</span>
+                  {{ end }}
+                </div>
+              </div>
+            {{ end }}
+            <div class="repo-date">{{ partial "icon.html" (dict "name" "calendar" "class" "svg-icon tiny") }}<span>{{ time.Format "Jan 2, 2006" .date }}</span>{{ with .blogPost }}<a href="{{ . }}">Blog</a>{{ end }}</div>
+          </div>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

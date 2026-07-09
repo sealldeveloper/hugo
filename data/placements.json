@@ -1,0 +1,158 @@
+[
+  {
+    "name": "UNSW SecSoc's SCONES",
+    "year": 2026,
+    "globalPlacement": 1,
+    "australiaPlacement": null,
+    "totalTeams": 60,
+    "teamName": "Emu Exploit",
+    "team": {
+      "url": "https://emu.team/",
+      "color": "#ef4444"
+    }
+  },
+  {
+    "name": "International Cybersecurity Challenge",
+    "year": 2026,
+    "globalPlacement": 3,
+    "australiaPlacement": null,
+    "totalTeams": 7,
+    "teamName": "Team Oceania",
+    "team": {
+      "url": "https://oceaniaicc.com/",
+      "color": "#38bdf8"
+    }
+  },
+  {
+    "name": "Hack the Harbour",
+    "year": 2026,
+    "globalPlacement": 2,
+    "australiaPlacement": null,
+    "totalTeams": 80,
+    "teamName": "Just me :3",
+    "team": {
+      "url": "",
+      "color": "#9ca3af"
+    }
+  },
+  {
+    "name": "BSides Canberra",
+    "year": 2025,
+    "globalPlacement": 1,
+    "australiaPlacement": null,
+    "totalTeams": 388,
+    "teamName": "Emu Exploit",
+    "team": {
+      "url": "https://emu.team/",
+      "color": "#ef4444"
+    }
+  },
+  {
+    "name": "UNSW SecSoc's SCONES",
+    "year": 2025,
+    "globalPlacement": 1,
+    "australiaPlacement": null,
+    "totalTeams": 74,
+    "teamName": "Emu Exploit",
+    "team": {
+      "url": "https://emu.team/",
+      "color": "#ef4444"
+    }
+  },
+  {
+    "name": "HackTheBox CTF",
+    "year": 2025,
+    "globalPlacement": 4,
+    "australiaPlacement": null,
+    "totalTeams": 4038,
+    "teamName": "thehackerscrew",
+    "team": {
+      "url": "https://www.thehackerscrew.team/",
+      "color": "#f97316"
+    }
+  },
+  {
+    "name": "DownUnder CTF",
+    "year": 2025,
+    "globalPlacement": 15,
+    "australiaPlacement": 1,
+    "totalTeams": 1667,
+    "teamName": "Emu Exploit",
+    "team": {
+      "url": "https://emu.team/",
+      "color": "#ef4444"
+    }
+  },
+  {
+    "name": "HackTheBox Business CTF",
+    "year": 2025,
+    "globalPlacement": 15,
+    "australiaPlacement": 1,
+    "totalTeams": 796,
+    "teamName": "TantoSec",
+    "team": {
+      "url": "https://tantosec.com/",
+      "color": "#7f1d1d"
+    }
+  },
+  {
+    "name": "International Cybersecurity Challenge",
+    "year": 2025,
+    "globalPlacement": 4,
+    "australiaPlacement": null,
+    "totalTeams": 8,
+    "teamName": "Team Oceania",
+    "team": {
+      "url": "https://oceaniaicc.com/",
+      "color": "#38bdf8"
+    }
+  },
+  {
+    "name": "UNSW SecSoc's SCONES",
+    "year": 2024,
+    "globalPlacement": 1,
+    "australiaPlacement": null,
+    "totalTeams": 61,
+    "teamName": "Just me :3",
+    "team": {
+      "url": "",
+      "color": "#9ca3af"
+    }
+  },
+  {
+    "name": "Australian Cyber Security Games",
+    "year": 2024,
+    "globalPlacement": 1,
+    "australiaPlacement": null,
+    "totalTeams": 45,
+    "teamName": "MQCyberSec",
+    "team": {
+      "url": "https://mqcybersec.org/",
+      "color": "#a78bfa"
+    }
+  },
+  {
+    "name": "MapnaCTF",
+    "year": 2024,
+    "globalPlacement": 2,
+    "australiaPlacement": null,
+    "totalTeams": 685,
+    "teamName": "IrisSec",
+    "team": {
+      "url": "https://irissec.xyz/",
+      "color": "#22c55e"
+    }
+  },
+  {
+    "name": "HackTheBox University CTF",
+    "year": 2024,
+    "globalPlacement": 49,
+    "australiaPlacement": 1,
+    "totalTeams": 1128,
+    "teamName": "MQCyberSec",
+    "team": {
+      "url": "https://mqcybersec.org/",
+      "color": "#a78bfa"
+    }
+  }
+]

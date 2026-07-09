@@ -1,0 +1,13 @@
+{{ $src := .Get "src" }}
+{{ $alt := default "" (.Get "alt") }}
+{{ $caption := .Get "caption" }}
+{{ $width := or (.Get "width") (.Get "maxWidth") }}
+{{ $height := or (.Get "height") (.Get "maxHeight") }}
+{{ $sizes := default "(min-width: 900px) 820px, calc(100vw - 2rem)" (.Get "sizes") }}
+{{ $styleParts := slice }}
+{{ with $width }}{{ $styleParts = $styleParts | append (printf "--media-max-width:%s;" .) }}{{ end }}
+{{ with $height }}{{ $styleParts = $styleParts | append (printf "--media-max-height:%s;" .) }}{{ end }}
+<figure class="article-media article-media-image"{{ if $styleParts }} style="{{ delimit $styleParts " " | safeCSS }}"{{ end }}>
+  {{ partial "responsive-image.html" (dict "src" $src "alt" $alt "sizes" $sizes) }}
+  {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

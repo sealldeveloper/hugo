@@ -1,0 +1,80 @@
+{{ define "main" }}
+<section class="content-section">
+  <h1 class="gradient-text">{{ .Title }}</h1>
+  {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+  {{ if or (eq .Section "blog") (eq .Section "writeups") }}
+    <div class="search-panel">
+      <input id="search-input" type="search" placeholder="Search {{ .Title | lower }}..." aria-label="Search {{ .Title }}">
+      <div class="filter-row" data-filter-group="section">
+        <button class="filter-button active" data-filter-type="section" data-filter="">All</button>
+        {{ $sections := slice }}
+        {{ range .Pages }}{{ with .Params.section }}{{ $sections = $sections | append . }}{{ end }}{{ end }}
+        {{ range uniq $sections }}
+          <button class="filter-button section-filter-{{ anchorize . }}" data-filter-type="section" data-filter="{{ . }}">
+            {{ if eq . "CTFs" }}{{ partial "icon.html" (dict "name" "flag" "class" "svg-icon tiny") }}{{ else if eq . "PicoCTF" }}<img class="filter-logo filter-logo-round" src="/images/picoctf.png" alt="" loading="lazy">{{ else if eq . "OverTheWire" }}{{ partial "icon.html" (dict "name" "overthewire" "class" "svg-icon tiny") }}{{ else if eq . "HackTheBox" }}{{ partial "icon.html" (dict "name" "hackthebox" "class" "svg-icon tiny") }}{{ else }}{{ partial "icon.html" (dict "name" "book" "class" "svg-icon tiny") }}{{ end }}
+            <span>{{ . }}</span>
+          </button>
+        {{ end }}
+      </div>
+      {{ if eq .Section "writeups" }}
+        <div class="filter-dropdown-row">
+          <details class="filter-dropdown" data-filter-group="category">
+            <summary>Category</summary>
+            <div class="filter-menu">
+              <button class="filter-button active" data-filter-type="category" data-filter="">All categories</button>
+              {{ $categories := slice }}
+              {{ range .Pages }}{{ with .Params.category }}{{ $categories = $categories | append . }}{{ end }}{{ end }}
+              {{ range uniq $categories }}<button class="filter-button" data-filter-type="category" data-filter="{{ . }}">{{ . }}</button>{{ end }}
+            </div>
+          </details>
+          <details class="filter-dropdown" data-filter-group="ctf">
+            <summary>CTF</summary>
+            <div class="filter-menu filter-menu-wide">
+              <button class="filter-button active" data-filter-type="ctf" data-filter="">All CTFs</button>
+              {{ $ctfs := slice }}
+              {{ range .Pages }}{{ with .Params.ctf }}{{ $ctfs = $ctfs | append . }}{{ end }}{{ end }}
+              {{ range uniq $ctfs }}<button class="filter-button" data-filter-type="ctf" data-filter="{{ . }}">{{ . }}</button>{{ end }}
+            </div>
+          </details>
+        </div>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  <div class="card-grid listing-grid {{ .Section }}-listing" id="listing-grid">
+    {{ range sort (where .Pages "Params.hidden" "!=" true) "Date" "desc" }}
+      {{ $sectionName := default "" .Params.section }}
+      {{ $categoryName := default "" .Params.category }}
+      {{ $tagText := delimit (.Params.tags | default slice) " " }}
+      <article class="content-card listing-card {{ $.Section }}-card" data-search="{{ lower (printf "%s %s %s %s %s %s %s" .Title .Description $sectionName $categoryName (default "" .Params.ctf) $tagText .Plain) }}" data-section="{{ $sectionName }}" data-category="{{ $categoryName }}" data-ctf="{{ default "" .Params.ctf }}">
+        <a class="listing-card-media" href="{{ .RelPermalink }}">
+          <div class="listing-card-title">
+            <span>{{ .Title }}{{ with .Params.ctf }} / {{ . }}{{ end }}</span>
+          </div>
+          {{ with .Params.image }}{{ partial "responsive-image.html" (dict "src" . "alt" "" "class" "listing-card-thumb" "loading" "lazy" "sizes" "(min-width: 980px) 9rem, 7rem") }}{{ end }}
+        </a>
+        <div class="card-body">
+          <div class="badge-row">
+            {{ with .Params.section }}<span class="badge badge-primary badge-section-{{ anchorize . }}">{{ . }}</span>{{ end }}
+            {{ with .Params.ctf }}<span class="badge badge-muted">{{ . }}</span>{{ end }}
+            {{ with .Params.category }}<span class="badge badge-secondary badge-category-{{ anchorize . }}">{{ . }}</span>{{ end }}
+            {{ with .Params.author }}{{ if eq $.Section "blog" }}<span class="badge badge-muted">by {{ . }}</span>{{ end }}{{ end }}
+          </div>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ with .Description }}<p>{{ . }}</p>{{ end }}
+          {{ with .Params.tags }}<div class="tags">{{ range . }}<span class="tag-pill tag-pill-{{ anchorize . }}">#{{ . }}</span>{{ end }}</div>{{ end }}
+          <div class="listing-card-footer">
+            {{ with .Date }}
+              <span>{{ partial "icon.html" (dict "name" "calendar" "class" "svg-icon tiny") }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "Jan 2, 2006" }}</time></span>
+            {{ end }}
+            {{ if eq $.Section "blog" }}
+              <span>{{ partial "icon.html" (dict "name" "clock" "class" "svg-icon tiny") }}{{ .ReadingTime }} min read</span>
+            {{ end }}
+            {{ with .Params.author }}{{ if ne $.Section "blog" }}<span>by <strong>{{ . }}</strong></span>{{ end }}{{ end }}
+          </div>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

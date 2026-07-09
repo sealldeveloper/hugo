@@ -1,0 +1,27 @@
+{{ define "main" }}
+<section class="content-section" id="museum">
+  <h1 class="gradient-text">Museum of Seals</h1>
+  <p class="lead">a <i>very serious</i> museum of seals people i know have drawn</p>
+  <div class="museum-carousel">
+    <button id="seal-carousel-prev" class="seal-nav seal-nav-prev" type="button" aria-label="Previous seals">‹</button>
+    <div id="seal-carousel" class="seal-grid" tabindex="0" data-seals='{{ site.Data.seals | jsonify }}'>
+      {{ range first 3 site.Data.seals }}
+        <article class="seal-plinth">
+          <div class="seal-stack">
+            <div class="seal-img-container" style="transform: translateY({{ default 0 .sealMarginTop }}px);"><img class="seal-img" src="{{ .image }}" alt="{{ .name }}"></div>
+            <div class="plinth-img-container"><img class="plinth-img" src="/assets/plinth.png" alt=""></div>
+          </div>
+          <div class="plinth-engraving"><strong>{{ upper .name }}</strong><span>by {{ .author }}</span>{{ with .flavourtext }}<em>"{{ . }}"</em>{{ end }}</div>
+        </article>
+      {{ end }}
+    </div>
+    <button id="seal-carousel-next" class="seal-nav seal-nav-next" type="button" aria-label="Next seals">›</button>
+  </div>
+  <h2 class="section-subtitle gradient-text">why?</h2>
+  <p class="museum-copy">most adults don't really have time or a desire to pop a pack of crayolas and do a silly drawing without judgement. i thought this would be fun to do and result in a small display of joy to have on my site. if you want to contribute a seal, contact me and ill happily add it :&gt; (if you are cool and rad)</p>
+  <div class="panel narrow"><h2>submit a seal</h2><ul><li>be cool</li><li>black and white: white outline, black fill, transparent around the outline</li><li>preferably no greys or other colours</li><li>preferably digitally drawn</li><li>MUST BE DRAWN AND CONCEPTUALISED BY YOU, NO AI</li></ul><p>there can be exceptions if your idea is rad, <a href="/contact/">contact me</a>.</p></div>
+  <h2>web buttons</h2>
+  <div class="webbuttons">{{ range where site.Data.webbuttons "category" "friends" }}{{ if not .hidden }}<a href="{{ .url }}"><img src="{{ with .image }}{{ . }}{{ else }}{{ .imageRemote }}{{ end }}" alt="{{ .name }}" loading="lazy"></a>{{ end }}{{ end }}</div>
+  {{ range where site.Data.webbuttons "category" "personal" }}{{ if not .hidden }}{{ $buttonImage := .imageRemote }}{{ with .image }}{{ $buttonImage = . }}{{ end }}{{ $buttonCode := printf `<a href="%s" target="_blank"><img src="%s" width="88" height="31"></a>` .url $buttonImage }}<div class="panel narrow"><h2>my web button</h2><div class="codeblock codeblock-wrap webbutton-codeblock">{{ transform.Highlight $buttonCode "html" "lineNos=false,noClasses=true,style=dracula" }}</div><a href="{{ .url }}"><img class="pixelated" src="{{ $buttonImage }}" alt="{{ .name }}"></a></div>{{ end }}{{ end }}
+</section>
+{{ end }}

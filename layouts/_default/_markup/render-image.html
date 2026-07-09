@@ -1,0 +1,13 @@
+{{ $alt := .Text }}
+{{ $title := .Title }}
+{{ $width := default "" (index .Attributes "width") }}
+{{ $height := default "" (index .Attributes "height") }}
+{{ $maxWidth := default $width (index .Attributes "maxWidth") }}
+{{ $maxHeight := default $height (index .Attributes "maxHeight") }}
+{{ $styleParts := slice }}
+{{ with $maxWidth }}{{ $styleParts = $styleParts | append (printf "--media-max-width:%s;" .) }}{{ end }}
+{{ with $maxHeight }}{{ $styleParts = $styleParts | append (printf "--media-max-height:%s;" .) }}{{ end }}
+<figure class="article-media"{{ if $styleParts }} style="{{ delimit $styleParts " " | safeCSS }}"{{ end }}>
+  {{ partial "responsive-image.html" (dict "src" .Destination "alt" $alt "sizes" "(min-width: 900px) 820px, calc(100vw - 2rem)") }}
+  {{ with $title }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

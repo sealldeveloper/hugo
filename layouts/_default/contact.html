@@ -1,0 +1,30 @@
+{{ define "main" }}
+<section class="content-section" id="contact">
+  <h1 class="gradient-text">Contact</h1>
+  <div class="info-grid two contact-grid">
+    <article class="panel contact-panel">
+      <h2>{{ partial "icon.html" (dict "name" "mail" "class" "svg-icon small") }}<span>Email</span></h2>
+      {{ $emailCode := "$ python3\n>>> \"{ihate}@{ihate}{crawlers}\".format(ihate=\"seal\", crawlers=\"l.dev\")" }}
+      <div class="codeblock codeblock-wrap contact-codeblock">
+        {{ transform.Highlight $emailCode "python" "lineNos=false,noClasses=true,style=dracula" }}
+      </div>
+      <h3>{{ partial "icon.html" (dict "name" "shield" "class" "svg-icon small") }}<span>(っ◔◡◔)っ ♥ pgp ♥</span></h3>
+      {{ $pgpCode := "curl 'https://seall.dev/public-key.asc' | gpg --import" }}
+      <div class="codeblock codeblock-wrap contact-codeblock">
+        {{ transform.Highlight $pgpCode "bash" "lineNos=false,noClasses=false,style=dracula" }}
+      </div>
+      <a class="small-link contact-chip" href="/proof.txt">why did your key change</a>
+    </article>
+    <article class="panel contact-panel">
+      <h2><span>Socials</span></h2>
+      <div class="social-link-grid">
+        <a href="https://twitter.com/sealldev">{{ partial "icon.html" (dict "name" "twitter" "class" "svg-icon small") }}<span>Twitter</span></a>
+        <a href="https://bsky.app/profile/seall.dev">{{ partial "icon.html" (dict "name" "bluesky" "class" "svg-icon small") }}<span>Bluesky</span></a>
+        <a href="https://discordapp.com/users/630874656198361099">{{ partial "icon.html" (dict "name" "discord" "class" "svg-icon small") }}<span>Discord</span></a>
+        <a href="https://www.linkedin.com/in/noah-cooper-5442ab309/">{{ partial "icon.html" (dict "name" "linkedin" "class" "svg-icon small") }}<span>LinkedIn</span></a>
+      </div>
+      <a class="small-link contact-chip" href="https://keyoxide.org/aspe:keyoxide.org:HDKVRFKX26N642GAEH7WUEVU2Q">Keyoxide</a>
+    </article>
+  </div>
+</section>
+{{ end }}

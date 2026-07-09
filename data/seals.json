@@ -1,0 +1,518 @@
+[
+  {
+    "name": "Sam the Seal",
+    "image": "/images/sam_the_seal_by_!ghost.png",
+    "author": "!Ghost",
+    "sealMarginTop": 15,
+    "flavourtext": "",
+    "_slug": "!ghost"
+  },
+  {
+    "name": "Slaesh",
+    "image": "/images/slaesh_by_7rocky.png",
+    "author": "7Rocky",
+    "sealMarginTop": 15,
+    "flavourtext": "",
+    "_slug": "7rocky"
+  },
+  {
+    "name": "spencer",
+    "image": "/images/spencer_by_a$h.png",
+    "author": "a$h",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "a$h"
+  },
+  {
+    "name": "Bip",
+    "image": "/images/bip_by_bellesaurus.png",
+    "author": "bellesaurus",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "bellesaurus"
+  },
+  {
+    "name": "charles \"gibbet\" dinkleton",
+    "image": "/images/charles_giblet_dinkleton_by_bobbedbob.png",
+    "author": "bobbedbob",
+    "sealMarginTop": 15,
+    "flavourtext": "",
+    "_slug": "bobbedbob"
+  },
+  {
+    "name": "nginx",
+    "image": "/images/nginx_by_boggle.png",
+    "author": "CaptainBoggle",
+    "sealMarginTop": 10,
+    "flavourtext": "cos its a load balancer",
+    "_slug": "boggle"
+  },
+  {
+    "name": "jim",
+    "image": "/images/jim_by_boogo.png",
+    "author": "boogo",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "boogo"
+  },
+  {
+    "name": "bryb",
+    "image": "/images/bryb_by_bryn.png",
+    "author": "Bryn",
+    "sealMarginTop": 20,
+    "flavourtext": "",
+    "_slug": "bryn"
+  },
+  {
+    "name": "jerald",
+    "image": "/images/jerald_by_caek.png",
+    "author": "Caek",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "caek"
+  },
+  {
+    "name": "Frisbee",
+    "image": "/images/frisbee_by_ch1maera.png",
+    "author": "Ch1maera",
+    "sealMarginTop": 20,
+    "flavourtext": "",
+    "_slug": "ch1maera"
+  },
+  {
+    "name": "skateboarding pup",
+    "image": "/images/skateboarding_pup_by_chsh.png",
+    "author": "chsh",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "chsh"
+  },
+  {
+    "name": "uhhhhhhhh",
+    "image": "/images/uhhhhhhhh_by_clovismint.png",
+    "author": "Clovis Mint",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "clovismint"
+  },
+  {
+    "name": "kevin",
+    "image": "/images/kevin_by_crem.png",
+    "author": "Crem",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "crem"
+  },
+  {
+    "name": "shack",
+    "image": "/images/shack_by_hazza.png",
+    "author": "DaHazza",
+    "_slug": "dahazza"
+  },
+  {
+    "name": "otto",
+    "image": "/images/otto_by_eljayright.png",
+    "author": "ElJayRight",
+    "sealMarginTop": 10,
+    "_slug": "eljayright"
+  },
+  {
+    "name": "%4919c%42$hn",
+    "image": "/images/_4919c_42$hn_by_eth007.png",
+    "author": "Eth007",
+    "sealMarginTop": 15,
+    "flavourtext": "",
+    "_slug": "eth007"
+  },
+  {
+    "name": "Bartholomew",
+    "image": "/images/bartholomew_by_ethan.png",
+    "author": "Ethan",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "ethan"
+  },
+  {
+    "name": "jeremy",
+    "image": "/images/jeremy_by_fsharp.png",
+    "author": "fsharp",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "fsharp"
+  },
+  {
+    "name": "greg",
+    "image": "/images/greg_by_greg.png",
+    "author": "greg",
+    "sealMarginTop": 40,
+    "flavourtext": "greg",
+    "_slug": "greg"
+  },
+  {
+    "name": "gurkin",
+    "image": "/images/gurkin_by_h4rl.png",
+    "author": "h4rl",
+    "sealMarginTop": 5,
+    "flavourtext": "",
+    "_slug": "h4rl"
+  },
+  {
+    "name": "grout",
+    "image": "/images/grout_by_harry.png",
+    "author": "Harry",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "harry"
+  },
+  {
+    "name": "robert",
+    "image": "/images/robert_by_hdawgington.png",
+    "author": "hdawgington",
+    "sealMarginTop": 20,
+    "_slug": "hdawgington"
+  },
+  {
+    "name": "weepy",
+    "image": "/images/weepy_by_hulkoperator.png",
+    "author": "hulkoperator",
+    "sealMarginTop": 15,
+    "flavourtext": "",
+    "_slug": "hulkoperator"
+  },
+  {
+    "name": "bobert",
+    "image": "/images/bobert_by_itsironiciinsist.png",
+    "author": "ItsIronicIInsist",
+    "sealMarginTop": 10,
+    "flavourtext": "",
+    "_slug": "itsironiciinsist"
+  },
+  {
+    "name": "alice",
+    "image": "/images/ixbixbam.png",
+    "author": "Ixbixbam",
+    "sealMarginTop": 20,
+    "flavourtext": "",
+    "_slug": "ixbixbam"
+  },
+  {
+    "name": "Eh",
+    "image": "/images/Eh_by_Izrid.png",
+    "author": "Izrid",
+    "sealMarginTop": 15,
+    "flavourtext": "",
+    "_slug": "izrid"
+  },
+  {
+    "name": "Magister Orbbert",
+    "image": "/images/james.png",
+    "author": "James",
+    "sealMarginTop": 20,
+    "flavourtext": "he sends his regards",
+    "_slug": "james"
+  },
+  {
+    "name": "Simon",
+    "image": "/images/simon_by_johnson.png",
+    "author": "Johnson",
+    "sealMarginTop": 10,
+    "flavourtext": "",
+    "_slug": "johnson"
+  },
+  {
+    "name": "Seal of Approval",
+    "image": "/images/seal_of_approval_by_justin.png",
+    "author": "Justin",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "justin"
+  },
+  {
+    "name": "imposteal",
+    "image": "/images/imposteal_by_kmack.png",
+    "author": "Kmack",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "kmack"
+  },
+  {
+    "name": "Glumbus",
+    "image": "/images/glumbus_by_lena.png",
+    "author": "Lena",
+    "sealMarginTop": 20,
+    "_slug": "lena"
+  },
+  {
+    "name": "Luceal",
+    "image": "/images/luceal_by_lychi.png",
+    "author": "Lychi",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "lychi"
+  },
+  {
+    "name": "sela",
+    "image": "/images/sela_by_mangopdf.png",
+    "author": "mangopdf",
+    "sealMarginTop": 15,
+    "flavourtext": "",
+    "_slug": "mangopdf"
+  },
+  {
+    "name": "Bonita",
+    "image": "/images/bonita_by_misskitty.png",
+    "author": "Miss Kitty",
+    "sealMarginTop": 25,
+    "flavourtext": "",
+    "_slug": "misskitty"
+  },
+  {
+    "name": "Ruby",
+    "image": "/images/ruby_by_moo.png",
+    "author": "Moo",
+    "sealMarginTop": 15,
+    "flavourtext": "",
+    "_slug": "moo"
+  },
+  {
+    "name": "han",
+    "image": "/images/han_by_moriarty.png",
+    "author": "Moriarty",
+    "sealMarginTop": 5,
+    "flavourtext": "",
+    "_slug": "moriarty"
+  },
+  {
+    "name": "Astrid",
+    "image": "/images/astrid_by_mtn.png",
+    "author": "mtn",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "mtn"
+  },
+  {
+    "name": "GALUMPH",
+    "image": "/images/GALUMPH_by_neobeo.png",
+    "author": "Neobeo",
+    "sealMarginTop": 15,
+    "flavourtext": "",
+    "_slug": "neobeo"
+  },
+  {
+    "name": "Neil",
+    "image": "/images/neil_by_ole.png",
+    "author": "Ole",
+    "sealMarginTop": 20,
+    "flavourtext": "",
+    "_slug": "ole"
+  },
+  {
+    "name": "0x34L",
+    "image": "/images/p1ay2win.png",
+    "author": "p1ay2win",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "p1ay2win"
+  },
+  {
+    "name": "bob",
+    "image": "/images/bob_by_p4ncakes.png",
+    "author": "p4ncakes",
+    "sealMarginTop": 2,
+    "flavourtext": "",
+    "_slug": "p4ncakes"
+  },
+  {
+    "name": "floppo",
+    "image": "/images/floppo_by_p4rr4.png",
+    "author": "p4rr4",
+    "sealMarginTop": 5,
+    "flavourtext": "",
+    "_slug": "p4rr4"
+  },
+  {
+    "name": "untitled",
+    "image": "/images/pi3ch.png",
+    "author": "pi3ch",
+    "sealMarginTop": 0,
+    "_slug": "pi3ch"
+  },
+  {
+    "name": "Tracy",
+    "image": "/images/tracy_by_popax21.png",
+    "author": "Popax21",
+    "sealMarginTop": 15,
+    "flavourtext": "",
+    "_slug": "popax21"
+  },
+  {
+    "name": "POP and SCLE",
+    "image": "/images/pop_and_scle_by_popscle.png",
+    "author": "POPscle",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "popscle"
+  },
+  {
+    "name": "Ernesto",
+    "image": "/images/raffaele.png",
+    "author": "raffaele",
+    "sealMarginTop": 10,
+    "_slug": "raffaele"
+  },
+  {
+    "name": "chonkbert",
+    "image": "/images/chonkbert_by_rdttl.png",
+    "author": "rdttl",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "rdttl"
+  },
+  {
+    "name": "notfreak",
+    "image": "/images/notfreak_by_roxiun.png",
+    "author": "roxiun",
+    "sealMarginTop": 5,
+    "flavourtext": "",
+    "_slug": "roxiun"
+  },
+  {
+    "name": "Angel Seal",
+    "image": "/images/angel_seal_by_sandra.png",
+    "author": "Sandra",
+    "sealMarginTop": 5,
+    "flavourtext": "",
+    "_slug": "sandra"
+  },
+  {
+    "name": "not done yet",
+    "image": "/images/not_done_yet_by_sclux7.png",
+    "author": "Sclux7",
+    "sealMarginTop": 0,
+    "_slug": "sclux7"
+  },
+  {
+    "name": "chag gya",
+    "image": "/images/chag_gya_by_shak.png",
+    "author": "Shak",
+    "sealMarginTop": 10,
+    "flavourtext": "",
+    "_slug": "shak"
+  },
+  {
+    "name": "paul",
+    "image": "/images/paul_by_sly.png",
+    "author": "Sly",
+    "sealMarginTop": 10,
+    "flavourtext": "",
+    "_slug": "sly"
+  },
+  {
+    "name": "Pinkman",
+    "image": "/images/solopie.png",
+    "author": "Solopie",
+    "sealMarginTop": 15,
+    "footertext": "mista white",
+    "_slug": "solopie"
+  },
+  {
+    "name": "ghoti",
+    "image": "/images/ghoti_by_ssparrow.png",
+    "author": "ssparrow",
+    "sealMarginTop": 10,
+    "_slug": "ssparrow"
+  },
+  {
+    "name": "stackseal",
+    "image": "/images/stackseal_by_stackotter.png",
+    "author": "stackotter",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "stackotter"
+  },
+  {
+    "name": "Squish",
+    "image": "/images/squish_by_sugaredlime.png",
+    "author": "sugaredlime",
+    "sealMarginTop": 15,
+    "flavourtext": "",
+    "_slug": "sugaredlime"
+  },
+  {
+    "name": "teddy",
+    "image": "/images/teddy_by_thesavageteddy.png",
+    "author": "TheSavageTeddy",
+    "sealMarginTop": 20,
+    "_slug": "thesavageteddy"
+  },
+  {
+    "name": "seally2",
+    "image": "/images/seally2_by_torry2.png",
+    "author": "torry2",
+    "sealMarginTop": 25,
+    "_slug": "torry2"
+  },
+  {
+    "name": "executive monsieur",
+    "image": "/images/executive_monsieur_by_tsuki.png",
+    "author": "Tsuki",
+    "sealMarginTop": 10,
+    "flavourtext": "",
+    "_slug": "tsuki"
+  },
+  {
+    "name": "561",
+    "image": "/images/561_by_tulip.png",
+    "author": "tulip",
+    "sealMarginTop": 10,
+    "_slug": "tulip"
+  },
+  {
+    "name": "Burder",
+    "image": "/images/burder_by_vi.png",
+    "author": "vi",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "vi-1"
+  },
+  {
+    "name": "Golshi",
+    "image": "/images/golshi_by_vi.png",
+    "author": "vi",
+    "sealMarginTop": 5,
+    "flavourtext": "",
+    "_slug": "vi-2"
+  },
+  {
+    "name": "Puck",
+    "image": "/images/puck_by_vi.png",
+    "author": "vi",
+    "sealMarginTop": 10,
+    "flavourtext": "",
+    "_slug": "vi-3"
+  },
+  {
+    "name": "Cebu",
+    "image": "/images/cebu_by_vitou.png",
+    "author": "Vitou",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "_slug": "vitou"
+  },
+  {
+    "name": "Gravy",
+    "image": "/images/gravy_by_wrth.png",
+    "author": "Wrth",
+    "sealMarginTop": 5,
+    "flavourtext": "",
+    "_slug": "wrth"
+  },
+  {
+    "name": "sealfawkes",
+    "image": "/images/sealfawkes_by_zackbudai.png",
+    "author": "zackbudai",
+    "sealMarginTop": 15,
+    "flavourtext": "",
+    "_slug": "zackbudai"
+  }
+]

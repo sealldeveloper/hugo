@@ -1,0 +1,19 @@
+{{ $items := slice
+  (dict "title" "Home" "url" "/" "icon" "home")
+  (dict "title" "whoami" "url" "/whoami/" "icon" "user")
+  (dict "title" "Things I've Done" "url" "/things-ive-done/" "icon" "briefcase")
+  (dict "title" "Writeups" "url" "/writeups/" "icon" "pencil")
+  (dict "title" "Blog" "url" "/blog/" "icon" "book")
+  (dict "title" "Museum" "url" "/museum/" "icon" "museum")
+  (dict "title" "Contact" "url" "/contact/" "icon" "mail")
+}}
+<ul>
+  {{ range $items }}
+    <li>
+      <a href="{{ .url }}" title="{{ .title }}" aria-label="{{ .title }}">
+        {{ partial "icon.html" (dict "name" .icon) }}
+        <span>{{ .title }}</span>
+      </a>
+    </li>
+  {{ end }}
+</ul>

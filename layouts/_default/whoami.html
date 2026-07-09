@@ -1,0 +1,38 @@
+{{ define "main" }}
+<section class="content-section" id="whoami">
+  <h1 class="gradient-text">whoami</h1>
+  <div class="pill">{{ partial "icon.html" (dict "name" "shield" "class" "svg-icon small") }}<span>Security Consultant @ <strong>TantoSec</strong></span></div>
+  <p class="lead">Uni student, <span class="text-primary">CTF Player</span>, and <span class="text-primary">pentester</span>. Currently finishing my degree and trying not to constantly skill issue.</p>
+  <div class="info-grid whoami-grid">
+    <article class="panel whoami-panel">
+      <h2>{{ partial "icon.html" (dict "name" "briefcase" "class" "svg-icon small") }}<span>What I do</span></h2>
+      <ul class="icon-list">
+        <li><span class="list-dot yellow"></span><span>CTFs with <span class="text-primary">Friendly Maltese Citizens</span>, <span class="text-primary">Emu Exploit</span>, <span class="text-primary">IrisSec</span></span></li>
+        <li><span class="list-dot blue"></span><span>Organise <span class="text-primary">MQCybersec</span> team</span></li>
+        <li><span class="list-dot red"></span><span>Occasional <span class="text-primary">Bug Bounty</span> and <span class="text-primary">Security Research</span></span></li>
+      </ul>
+    </article>
+    <article class="panel whoami-panel">
+      <h2>{{ partial "icon.html" (dict "name" "tag" "class" "svg-icon small") }}<span>CTF Categories</span></h2>
+      <div class="category-list">
+        <div><span class="list-dot green"></span>Forensics</div>
+        <div><span class="list-dot red"></span>OSINT</div>
+        <div><span class="list-dot yellow"></span>Web</div>
+      </div>
+    </article>
+    <article class="panel whoami-panel">
+      <h2>{{ partial "icon.html" (dict "name" "book" "class" "svg-icon small") }}<span>Top Languages</span></h2>
+      <div id="wakatime-languages" class="language-list"><span class="loading-line">Loading stats...</span></div>
+      <a class="subtle-link" href="https://wakatime.com/@sealldeveloper">{{ partial "icon.html" (dict "name" "external" "class" "svg-icon tiny") }}via Wakatime</a>
+    </article>
+    <article class="panel whoami-panel">
+      <h2>{{ partial "icon.html" (dict "name" "shield" "class" "svg-icon small") }}<span>Rankings</span></h2>
+      <div class="ranking-list">
+        <div><span>SecDim</span><strong class="purple">Peak: 3rd</strong></div>
+        <div><span>TryHackMe</span><strong class="red">Peak: Top 1k</strong></div>
+        <div><span>HackTheBox</span><strong class="green">Peak: 5th Aus.</strong></div>
+      </div>
+    </article>
+  </div>
+</section>
+{{ end }}

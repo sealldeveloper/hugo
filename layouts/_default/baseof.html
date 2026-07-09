@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  {{ if eq .Section "blog" }}
+    {{ with site.GetPage "blog" }}{{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" title="sealldev Blog RSS" href="{{ .Permalink }}">{{ end }}{{ end }}
+  {{ else if eq .Section "writeups" }}
+    {{ with site.GetPage "writeups" }}{{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" title="sealldev Writeups RSS" href="{{ .Permalink }}">{{ end }}{{ end }}
+  {{ end }}
+  <meta name="theme-color" content="#ec4899">
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}sealldev{{ end }}">
+  <meta property="og:title" content="{{ if .IsHome }}Home | {{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}sealldev{{ end }}">
+  <meta property="og:image" content="{{ absURL "assets/logo.png" }}">
+  <title>{{ if .IsHome }}Home{{ else }}{{ .Title }}{{ end }} | {{ site.Title }}</title>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  {{ partial "header.html" . }}
+  <main class="{{ if not .IsHome }}page-main{{ else }}home-main{{ end }}">{{ block "main" . }}{{ end }}</main>
+  {{ if not .IsHome }}{{ partial "footer.html" . }}{{ end }}
+  <script src="/js/site.js" defer></script>
+</body>
+</html>

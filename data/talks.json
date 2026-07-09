@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Cyber Security Industry Panel: Breaking Into Cyber",
+    "event": "UTS Cyber Security Society",
+    "year": 2025,
+    "speakers": "",
+    "url": "https://www.youtube.com/watch?v=ZHyD7aTRIBA",
+    "_slug": "breaking-into-cyber-panel",
+    "embed": "https://www.youtube-nocookie.com/embed/ZHyD7aTRIBA?rel=0"
+  },
+  {
+    "title": "Intro To Hardware Hacking",
+    "event": "UTS Cyber Security Society",
+    "year": 2025,
+    "speakers": "Noah Cooper & Leo Airey",
+    "url": "https://www.youtube.com/watch?v=UtR9xLlmptI",
+    "_slug": "intro-to-hardware-hacking",
+    "embed": "https://www.youtube-nocookie.com/embed/UtR9xLlmptI?rel=0"
+  },
+  {
+    "title": "Weaponising XSS for Red Teams",
+    "event": "Kawaiicon",
+    "year": 2025,
+    "speakers": "Noah Cooper & Jesse Nguyen",
+    "url": "https://youtu.be/bvXUJsngrlo",
+    "_slug": "weaponising-xss-for-red-teams",
+    "embed": "https://www.youtube-nocookie.com/embed/bvXUJsngrlo?rel=0"
+  }
+]

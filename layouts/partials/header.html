@@ -1,0 +1,12 @@
+<header id="page-header" class="site-header">
+  <a class="brand" href="/"><img src="/assets/logo.png" alt="sealldev"><span>sealldev</span></a>
+  <button id="open-nav-button" class="icon-button mobile-only" type="button" aria-label="Navigation">{{ partial "icon.html" (dict "name" "menu") }}</button>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    {{ partial "nav.html" . }}
+  </nav>
+  <div id="menu-modal" class="menu-modal" hidden>
+    <button id="close-nav-button" class="icon-button close-button" type="button" aria-label="Close navigation">{{ partial "icon.html" (dict "name" "close") }}</button>
+    <img class="menu-logo" src="/assets/logo.png" alt="sealldev">
+    <nav aria-label="Mobile navigation">{{ partial "nav.html" . }}</nav>
+  </div>
+</header>

@@ -1,0 +1,90 @@
+[
+  {
+    "name": "bellesaurus",
+    "url": "https://bellesaurus.github.io/",
+    "image": "/images/bellesaurus.gif",
+    "category": "friends",
+    "order": 5,
+    "_slug": "bellesaurus"
+  },
+  {
+    "name": "cats.fish",
+    "url": "https://cats.fish/",
+    "image": "/images/catsfish.png",
+    "category": "friends",
+    "order": 6,
+    "_slug": "catsfish"
+  },
+  {
+    "name": "eljayright",
+    "url": "https://eljayright.dev/",
+    "image": "/images/eljayright.png",
+    "category": "friends",
+    "order": 4,
+    "_slug": "eljayright"
+  },
+  {
+    "name": "h4rl",
+    "url": "https://h4rl.dev/",
+    "image": "/images/h4rl.png",
+    "category": "friends",
+    "order": 2,
+    "_slug": "h4rl"
+  },
+  {
+    "name": "izrid",
+    "url": "https://izrid.github.io/",
+    "image": "/images/izrid.gif",
+    "category": "friends",
+    "order": 3,
+    "_slug": "izrid"
+  },
+  {
+    "name": "nullablevoid",
+    "url": "https://nullablevo.id.au/",
+    "imageRemote": "https://nullablevo.id.au/images/button.png",
+    "category": "friends",
+    "order": 10,
+    "_slug": "nullablevoid"
+  },
+  {
+    "name": "sclux7",
+    "url": "https://sclux7.world/",
+    "image": "/images/sclux7.gif",
+    "category": "friends",
+    "order": 1,
+    "_slug": "sclux7"
+  },
+  {
+    "name": "sealldev",
+    "url": "https://seall.dev/",
+    "imageRemote": "https://seall.dev/sealldev.gif",
+    "category": "personal",
+    "order": 1,
+    "_slug": "sealldev"
+  },
+  {
+    "name": "shak",
+    "url": "https://www.linkedin.com/in/tenzin-shakya-82bb68259/",
+    "image": "/images/shak.png",
+    "category": "friends",
+    "order": 9,
+    "_slug": "shak"
+  },
+  {
+    "name": "snowrat",
+    "url": "https://iamsandra.me/",
+    "image": "/images/snowrat.gif",
+    "category": "friends",
+    "order": 7,
+    "_slug": "snowrat"
+  },
+  {
+    "name": "warlocksmurf",
+    "url": "https://warlocksmurf.github.io/",
+    "image": "/images/warlocksmurf.gif",
+    "category": "friends",
+    "order": 8,
+    "_slug": "warlocksmurf"
+  }
+]

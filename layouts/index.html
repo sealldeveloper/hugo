@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section class="splash">
+  <canvas id="falling-canvas" data-images="{{ range $i, $seal := site.Data.seals }}{{ if $i }},{{ end }}{{ $seal.image }}{{ end }}"></canvas>
+  <div class="splash-content">
+    <img src="/assets/logo.png" alt="sealldev" class="splash-logo">
+    <h1 class="gradient-text">sealldev</h1>
+    <nav class="splash-nav" aria-label="Main navigation">{{ partial "nav.html" . }}</nav>
+    <div id="nav-tooltip" class="nav-tooltip" aria-hidden="true"></div>
+  </div>
+</section>
+{{ end }}

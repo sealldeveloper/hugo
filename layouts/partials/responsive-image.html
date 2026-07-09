@@ -1,0 +1,30 @@
+{{ $src := .src }}
+{{ $alt := default "" .alt }}
+{{ $class := default "" .class }}
+{{ $loading := default "lazy" .loading }}
+{{ $sizes := default "(min-width: 900px) 820px, calc(100vw - 2rem)" .sizes }}
+{{ $resourcePath := strings.TrimPrefix "/" $src }}
+{{ $image := resources.Get $resourcePath }}
+{{ if and $image (in (slice "image/png" "image/jpeg" "image/webp") $image.MediaType.Type) }}
+  {{ $widths := slice 320 480 768 1024 1440 1920 }}
+  {{ $max := int (math.Min $image.Width 1920) }}
+  {{ $encode := cond (eq $image.MediaType.Type "image/jpeg") "webp q95" "webp lossless" }}
+  {{ $srcset := slice }}
+  {{ $seen := dict }}
+  {{ range $widths }}
+    {{ $candidate := int . }}
+    {{ if le $candidate $max }}
+      {{ $processed := $image.Resize (printf "%dx %s" $candidate $encode) }}
+      {{ $srcset = $srcset | append (printf "%s %dw" $processed.RelPermalink $candidate) }}
+      {{ $seen = merge $seen (dict (printf "%d" $candidate) true) }}
+    {{ end }}
+  {{ end }}
+  {{ if not (index $seen (printf "%d" $max)) }}
+    {{ $processed := $image.Resize (printf "%dx %s" $max $encode) }}
+    {{ $srcset = $srcset | append (printf "%s %dw" $processed.RelPermalink $max) }}
+  {{ end }}
+  {{ $fallback := $image.Resize (printf "%dx %s" $max $encode) }}
+  <img src="{{ $fallback.RelPermalink }}" srcset="{{ delimit $srcset ", " }}" sizes="{{ $sizes }}" width="{{ $fallback.Width }}" height="{{ $fallback.Height }}" alt="{{ $alt }}" class="{{ $class }}" loading="{{ $loading }}" decoding="async">
+{{ else }}
+  <img src="{{ $src }}" alt="{{ $alt }}" class="{{ $class }}" loading="{{ $loading }}" decoding="async">
+{{ end }}

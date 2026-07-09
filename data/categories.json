@@ -1,0 +1,184 @@
+[
+  {
+    "name": "AI",
+    "icon": "⚡",
+    "description": "Challenges involving artificial intelligence, machine learning, and their security implications",
+    "color": "#0ea5e9",
+    "_slug": "ai"
+  },
+  {
+    "name": "Blockchain",
+    "icon": "🔗",
+    "description": "Tools for analyzing, investigating, and interacting with blockchain networks, cryptocurrencies, and smart contracts",
+    "color": "#f59e0b",
+    "_slug": "blockchain"
+  },
+  {
+    "name": "Cloud",
+    "icon": "☁️",
+    "description": "Tools for security testing, exploitation, and defense of cloud environments including AWS, Azure, GCP, and other cloud platforms",
+    "color": "#0ea5e9",
+    "_slug": "cloud"
+  },
+  {
+    "name": "Credential",
+    "icon": "🔐",
+    "description": "Tools focused on credential theft, dumping, cracking, and authentication attacks",
+    "color": "#7c3aed",
+    "_slug": "credential"
+  },
+  {
+    "name": "Crypto",
+    "icon": "🔒",
+    "description": "Tools related to cryptography, including encryption, decryption, hashing, and cryptanalysis",
+    "color": "#059669",
+    "_slug": "crypto"
+  },
+  {
+    "name": "Disk Forensics",
+    "icon": "💽",
+    "description": "Analysis of storage media to recover deleted files and identify evidence of security incidents",
+    "color": "#10b981",
+    "_slug": "disk forensics"
+  },
+  {
+    "name": "Firmware",
+    "icon": "🔌",
+    "description": "Tools for analyzing, extracting, and reverse engineering device firmware and embedded systems",
+    "color": "#8b5cf6",
+    "_slug": "firmware"
+  },
+  {
+    "name": "Forensics",
+    "icon": "🔬",
+    "description": "Forensics is the art of recovering the digital trail left on a computer",
+    "color": "#8b5cf6",
+    "_slug": "forensics"
+  },
+  {
+    "name": "FullPwn",
+    "icon": "🔓",
+    "description": "Complete system compromise involving multiple stages of exploitation",
+    "color": "#f97316",
+    "_slug": "fullpwn"
+  },
+  {
+    "name": "Games",
+    "icon": "🎮",
+    "description": "Tools for game hacking / cheating / modding",
+    "color": "#f2dc5e",
+    "_slug": "games"
+  },
+  {
+    "name": "Hardware",
+    "icon": "🔌",
+    "description": "Tools for interfacing with, analyzing, and exploiting physical hardware devices, embedded systems, and electronic components",
+    "color": "#ef4444",
+    "_slug": "hardware"
+  },
+  {
+    "name": "Linux",
+    "icon": "🐧",
+    "description": "Tools specifically designed for Linux security assessment, privilege escalation, and system monitoring",
+    "color": "#f97316",
+    "_slug": "linux"
+  },
+  {
+    "name": "Memory Forensics",
+    "icon": "🧠",
+    "description": "Examination of system memory to detect malware, rootkits, and other advanced threats",
+    "color": "#f59e0b",
+    "_slug": "memory forensics"
+  },
+  {
+    "name": "Misc",
+    "icon": "🧩",
+    "description": "Miscellaneous challenges that don't fit into other categories",
+    "color": "#a855f7",
+    "_slug": "misc"
+  },
+  {
+    "name": "Mobile",
+    "icon": "📱",
+    "description": "Tools for analyzing, testing, and securing mobile applications and devices across iOS and Android platforms",
+    "color": "#10b981",
+    "_slug": "mobile"
+  },
+  {
+    "name": "Network Forensics",
+    "icon": "📡",
+    "description": "Analysis of network traffic and logs to identify security incidents and attacker activities",
+    "color": "#ec4899",
+    "_slug": "network forensics"
+  },
+  {
+    "name": "Network",
+    "icon": "🌐",
+    "description": "Tools for network scanning, analysis, exploitation, and protocol manipulation",
+    "color": "#16a34a",
+    "_slug": "network"
+  },
+  {
+    "name": "OSINT",
+    "icon": "🔍",
+    "description": "Open Source Intelligence involves gathering and analyzing publicly available information",
+    "color": "#06b6d4",
+    "_slug": "osint"
+  },
+  {
+    "name": "PrivEsc",
+    "icon": "🔑",
+    "description": "Tools for local and remote privilege escalation that help attackers gain higher-level access on systems",
+    "color": "#e11d48",
+    "_slug": "privesc"
+  },
+  {
+    "name": "Pwn",
+    "icon": "💥",
+    "description": "Exploitation of binary vulnerabilities to gain control of a program or system",
+    "color": "#ef4444",
+    "_slug": "pwn"
+  },
+  {
+    "name": "Rev",
+    "icon": "⚙️",
+    "description": "Reverse Engineering involves analyzing software to understand its functionality and find vulnerabilities",
+    "color": "#6366f1",
+    "_slug": "rev"
+  },
+  {
+    "name": "Stego",
+    "icon": "🔍",
+    "description": "Tools for creating, detecting, and extracting information hidden using steganography techniques in various media formats",
+    "color": "#0d9488",
+    "_slug": "stego"
+  },
+  {
+    "name": "Wasm",
+    "icon": "🧩",
+    "description": "Tools for analyzing, decompiling, and working with WebAssembly (WASM) binaries and modules",
+    "color": "#7e22ce",
+    "_slug": "wasm"
+  },
+  {
+    "name": "Web",
+    "icon": "🌐",
+    "description": "Web security involves identifying and exploiting vulnerabilities in web applications and services",
+    "color": "#3b82f6",
+    "_slug": "web"
+  },
+  {
+    "name": "Windows Forensics",
+    "icon": "🪟",
+    "description": "Investigation of Windows systems to recover evidence of security breaches and malicious activities",
+    "color": "#8b5cf6",
+    "_slug": "windows forensics"
+  },
+  {
+    "name": "Windows",
+    "icon": "🪟",
+    "description": "Tools specifically designed for attacking and securing Windows operating systems and environments",
+    "color": "#0284c7",
+    "_slug": "windows"
+  }
+]

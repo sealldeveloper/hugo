@@ -1,0 +1,15 @@
+{{ $src := .Get "src" }}
+{{ $type := default "" (.Get "type") }}
+{{ $poster := .Get "poster" }}
+{{ $caption := .Get "caption" }}
+{{ $width := or (.Get "width") (.Get "maxWidth") }}
+{{ $height := or (.Get "height") (.Get "maxHeight") }}
+{{ $styleParts := slice }}
+{{ with $width }}{{ $styleParts = $styleParts | append (printf "--media-max-width:%s;" .) }}{{ end }}
+{{ with $height }}{{ $styleParts = $styleParts | append (printf "--media-max-height:%s;" .) }}{{ end }}
+<figure class="article-media article-media-video"{{ if $styleParts }} style="{{ delimit $styleParts " " | safeCSS }}"{{ end }}>
+  <video controls preload="metadata"{{ with $poster }} poster="{{ . }}"{{ end }}>
+    <source src="{{ $src }}"{{ with $type }} type="{{ . }}"{{ end }}>
+  </video>
+  {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

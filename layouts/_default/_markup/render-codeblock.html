@@ -1,0 +1,20 @@
+{{ $lang := .Type | default "text" }}
+{{ $attrs := .Attributes }}
+{{ $wrapValue := or (index $attrs "wrap") (index $attrs "linewrap") }}
+{{ $wrap := false }}
+{{ with $wrapValue }}
+  {{ $value := lower (printf "%v" .) }}
+  {{ $wrap = or (eq $value "true") (eq $value "wrap") (eq $value "1") }}
+{{ end }}
+{{ $eyeLines := or (index $attrs "eyes") (index $attrs "eye") (index $attrs "eyeballs") (index $attrs "eyeball") }}
+{{ $jsonFormatValue := "" }}
+{{ if isset $attrs "json_format" }}{{ $jsonFormatValue = lower (printf "%v" (index $attrs "json_format")) }}{{ end }}
+{{ if isset $attrs "json-format" }}{{ $jsonFormatValue = lower (printf "%v" (index $attrs "json-format")) }}{{ end }}
+{{ if isset $attrs "jsonFormat" }}{{ $jsonFormatValue = lower (printf "%v" (index $attrs "jsonFormat")) }}{{ end }}
+{{ $classes := slice "codeblock" }}
+{{ if $wrap }}{{ $classes = $classes | append "codeblock-wrap" }}{{ end }}
+{{ with $eyeLines }}{{ $classes = $classes | append "codeblock-eyes" }}{{ end }}
+<div class="{{ delimit $classes " " }}"{{ with $eyeLines }} data-eye-lines="{{ printf "%v" . }}"{{ end }}{{ with $jsonFormatValue }} data-json-format="{{ . }}"{{ end }}>
+  {{ with $lang }}<div class="codeblock-lang">{{ . }}</div>{{ end }}
+  {{ transform.Highlight .Inner $lang "lineNos=false,noClasses=false,style=dracula" }}
+</div>

@@ -1,0 +1,12 @@
+{{ $src := .Get "src" }}
+{{ $type := default "" (.Get "type") }}
+{{ $caption := .Get "caption" }}
+{{ $width := or (.Get "width") (.Get "maxWidth") }}
+{{ $styleParts := slice }}
+{{ with $width }}{{ $styleParts = $styleParts | append (printf "--media-max-width:%s;" .) }}{{ end }}
+<div class="article-audio-block"{{ if $styleParts }} style="{{ delimit $styleParts " " | safeCSS }}"{{ end }}>
+  <audio controls preload="metadata">
+    <source src="{{ $src }}"{{ with $type }} type="{{ . }}"{{ end }}>
+  </audio>
+  {{ with $caption }}<div class="article-audio-caption">{{ . }}</div>{{ end }}
+</div>

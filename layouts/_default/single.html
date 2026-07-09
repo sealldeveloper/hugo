@@ -1,0 +1,56 @@
+{{ define "main" }}
+{{ if .Params.redirect_to }}
+  <meta http-equiv="refresh" content="0; url={{ .Params.redirect_to }}">
+  <section class="content-section"><h1 class="gradient-text">{{ .Title }}</h1><p class="lead">This page moved to <a href="{{ .Params.redirect_to }}">Things I've Done</a>.</p></section>
+{{ else }}
+  <article class="article">
+    <a class="back-link" href="/{{ .Section }}/">← Back to {{ .Section | title }}</a>
+    <header>
+      {{ if eq .Section "writeups" }}
+        <div class="article-meta">{{ with .Date }}{{ .Format "January 2, 2006" }}{{ end }}{{ with .Params.author }} · by <span>{{ . }}</span>{{ end }}{{ with .Params.section }} · {{ . }}{{ end }}{{ with .Params.ctf }} · {{ . }}{{ end }}</div>
+        <section class="challenge-hero">
+          <div class="challenge-hero-copy">
+            <h1>{{ .Title }}{{ with .Params.ctf }} / {{ . }}{{ end }}</h1>
+          </div>
+          {{ with .Params.image }}<div class="challenge-hero-media">{{ partial "responsive-image.html" (dict "src" . "alt" "" "class" "challenge-hero-image" "loading" "eager" "sizes" "(min-width: 900px) 16rem, 7rem") }}</div>{{ end }}
+        </section>
+        {{ with .Description }}
+          <section class="challenge-description">
+            <h2>Description</h2>
+            <p>{{ . }}</p>
+          </section>
+        {{ end }}
+      {{ else if eq .Section "blog" }}
+        <div class="article-meta">{{ with .Date }}{{ .Format "January 2, 2006" }}{{ end }}{{ with .Params.author }} · by <span>{{ . }}</span>{{ end }}{{ with .Params.section }} · {{ . }}{{ end }}{{ if .ReadingTime }} · {{ .ReadingTime }} min read{{ end }}</div>
+        <section class="challenge-hero">
+          <div class="challenge-hero-copy">
+            <h1>{{ .Title }}</h1>
+            {{ with .Description }}<p class="article-description">{{ . }}</p>{{ end }}
+          </div>
+          {{ with .Params.image }}<div class="challenge-hero-media">{{ partial "responsive-image.html" (dict "src" . "alt" "" "class" "challenge-hero-image" "loading" "eager" "sizes" "(min-width: 900px) 16rem, 7rem") }}</div>{{ end }}
+        </section>
+      {{ else }}
+        <h1 class="gradient-text">{{ .Title }}</h1>
+        <div class="article-meta">{{ with .Date }}{{ .Format "January 2, 2006" }}{{ end }}{{ with .Params.author }} · by <span>{{ . }}</span>{{ end }}{{ with .Params.section }} · {{ . }}{{ end }}{{ with .Params.ctf }} · {{ . }}{{ end }}</div>
+        {{ with .Description }}<p class="article-description">{{ . }}</p>{{ end }}
+        {{ with .Params.image }}{{ partial "responsive-image.html" (dict "src" . "alt" "" "class" "hero-image" "loading" "eager" "sizes" "(min-width: 900px) 820px, calc(100vw - 2rem)") }}{{ end }}
+      {{ end }}
+      {{ with .Params.tags }}<div class="tags">{{ range . }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
+    </header>
+    {{ if or (eq .Section "blog") (eq .Section "writeups") }}
+      <nav id="table-of-contents" class="article-toc" aria-label="Table of contents">
+        <ul id="toc-list"></ul>
+      </nav>
+    {{ end }}
+    <div class="prose" id="article-content">{{ .Content }}</div>
+  </article>
+  {{ if or (eq .Section "blog") (eq .Section "writeups") }}
+    <div id="image-zoom-modal" class="image-zoom-modal hidden" aria-hidden="true">
+      <div class="image-zoom-stage">
+        <img id="zoomed-image" src="" alt="">
+        <button id="close-zoom-modal" class="image-zoom-close" type="button" aria-label="Close image preview">×</button>
+      </div>
+    </div>
+  {{ end }}
+{{ end }}
+{{ end }}

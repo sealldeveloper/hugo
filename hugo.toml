@@ -1,0 +1,31 @@
+baseURL = 'https://seall.dev/'
+languageCode = 'en-us'
+title = 'sealldev'
+enableRobotsTXT = false
+buildDrafts = true
+summaryLength = 32
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[outputFormats.rss]
+  baseName = 'rss'
+
+[outputs]
+  home = ['HTML']
+  section = ['HTML', 'RSS']
+
+[[module.mounts]]
+  source = 'content'
+  target = 'content'
+
+[[module.mounts]]
+  source = 'static'
+  target = 'static'
+
+[[module.mounts]]
+  source = 'static/images'
+  target = 'assets/images'

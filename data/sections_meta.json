@@ -1,0 +1,30 @@
+[
+  {
+    "name": "CTFs",
+    "icon": "🚩",
+    "color": "#f59e0b",
+    "description": "Writeups related to jeopardy/attack-defense CTFs",
+    "_slug": "ctfs"
+  },
+  {
+    "name": "HackTheBox",
+    "iconImage": "/images/htb.png",
+    "color": "#9fef00",
+    "description": "Writeups for HackTheBox machines and challenges",
+    "_slug": "hackthebox"
+  },
+  {
+    "name": "OverTheWire",
+    "icon": "🎯",
+    "color": "#ff6b6b",
+    "description": "Writeups for OverTheWire wargames including Bandit, Leviathan, and more",
+    "_slug": "overthewire"
+  },
+  {
+    "name": "PicoCTF",
+    "iconImage": "/images/picoctf.png",
+    "color": "#3b82f6",
+    "description": "Writeups for PicoCTF challenges",
+    "_slug": "picoctf"
+  }
+]
