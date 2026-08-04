@@ -27,6 +27,15 @@
     "_slug": "a$h"
   },
   {
+    "name": "baliseal",
+    "image": "/images/baliseal_by_balisong.png",
+    "author": "balisong",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "addedAt": "2025-09-01T00:00:00+10:00",
+    "_slug": "balisong"
+  },
+  {
     "name": "Bip",
     "image": "/images/bip_by_bellesaurus.png",
     "author": "bellesaurus",
