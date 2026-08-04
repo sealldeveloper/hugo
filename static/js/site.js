@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initFalling();
   initFooterGrid();
   initFooterOverscroll();
-  initMuseum();
   initArticleEnhancements();
   initCodeblockEnhancements();
 });
@@ -913,89 +912,4 @@ function initImageZoom() {
       closeModal();
     }
   });
-}
-
-function initMuseum() {
-  const grid = document.getElementById("seal-carousel");
-  if (!grid) return;
-
-  let seals = [];
-  try {
-    seals = JSON.parse(grid.dataset.seals || "[]");
-  } catch {
-    return;
-  }
-  if (!seals.length) return;
-
-  let index = 0;
-  let timer = null;
-  let fadeTimer = null;
-  let resumeTimer = null;
-  const slotCount = window.matchMedia("(max-width: 640px)").matches ? 1 : 3;
-
-  const visibleSeals = () => {
-    const output = [];
-    for (let offset = 0; offset < slotCount; offset += 1) {
-      output.push(seals[(index + offset) % seals.length]);
-    }
-    return output;
-  };
-
-  const render = () => {
-    grid.innerHTML = visibleSeals()
-      .map(
-        (seal) => `<article class="seal-plinth"><div class="seal-stack"><div class="seal-img-container" style="transform: translateY(${typeof seal.sealMarginTop === "number" ? seal.sealMarginTop : 0}px);"><img class="seal-img" src="${seal.image}" alt="${seal.name}"></div><div class="plinth-img-container"><img class="plinth-img" src="/assets/plinth.png" alt=""></div></div><div class="plinth-engraving"><strong>${String(seal.name).toUpperCase()}</strong><span>by ${seal.author}</span>${seal.flavourtext ? `<em>"${seal.flavourtext}"</em>` : ""}</div></article>`,
-      )
-      .join("");
-  };
-
-  const step = (amount, animate = true) => {
-    index = (index + amount + seals.length) % seals.length;
-    window.clearTimeout(fadeTimer);
-    if (!animate || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      grid.classList.remove("is-fading");
-      render();
-      return;
-    }
-    grid.classList.add("is-fading");
-    fadeTimer = window.setTimeout(() => {
-      render();
-      requestAnimationFrame(() => grid.classList.remove("is-fading"));
-    }, 180);
-  };
-
-  const start = () => {
-    if (timer || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    timer = window.setInterval(() => step(slotCount), 3000);
-  };
-
-  const stop = () => {
-    if (!timer) return;
-    window.clearInterval(timer);
-    timer = null;
-  };
-
-  const pauseForManualInput = () => {
-    stop();
-    window.clearTimeout(resumeTimer);
-    resumeTimer = window.setTimeout(start, 3000);
-  };
-
-  document.getElementById("seal-carousel-next")?.addEventListener("click", () => {
-    step(slotCount);
-    pauseForManualInput();
-  });
-  document.getElementById("seal-carousel-prev")?.addEventListener("click", () => {
-    step(-slotCount);
-    pauseForManualInput();
-  });
-  grid.addEventListener("keydown", (event) => {
-    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
-    event.preventDefault();
-    step(event.key === "ArrowRight" ? slotCount : -slotCount);
-    pauseForManualInput();
-  });
-  grid.addEventListener("mouseenter", stop);
-  grid.addEventListener("mouseleave", start);
-  start();
 }

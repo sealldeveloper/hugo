@@ -17,6 +17,7 @@
   <meta property="og:image" content="{{ absURL "assets/logo.png" }}">
   <title>{{ if .IsHome }}Home{{ else }}{{ .Title }}{{ end }} | {{ site.Title }}</title>
   <link rel="stylesheet" href="/css/site.css">
+  {{ with .Params.stylesheet }}<link rel="stylesheet" href="{{ . }}">{{ end }}
 </head>
 <body>
   {{ partial "header.html" . }}

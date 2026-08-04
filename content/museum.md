@@ -2,4 +2,5 @@
 title: "Museum"
 description: "sealldev is an aussie cybersec nerd who is trying to make a decent website probably maybe hopefully :3"
 layout: "museum"
+stylesheet: "/css/museum.css"
 ---
