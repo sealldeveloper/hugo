@@ -310,6 +310,15 @@
     "_slug": "mangopdf"
   },
   {
+    "name": "Shroom",
+    "image": "/images/shroom_by_marximus.png",
+    "author": "Marximus",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "addedAt": "2026-08-05T12:17:19+10:00",
+    "_slug": "marximus"
+  },
+  {
     "name": "Bonita",
     "image": "/images/bonita_by_misskitty.png",
     "author": "Miss Kitty",
