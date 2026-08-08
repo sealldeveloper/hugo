@@ -301,6 +301,15 @@
     "_slug": "lena"
   },
   {
+    "name": "seal deal",
+    "image": "/images/seal_deal_by_littlelailo.png",
+    "author": "littlelailo",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "addedAt": "2026-08-08T21:37:27+10:00",
+    "_slug": "littlelailo"
+  },
+  {
     "name": "Luceal",
     "image": "/images/luceal_by_lychi.png",
     "author": "Lychi",
