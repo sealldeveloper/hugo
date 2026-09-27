@@ -36,6 +36,15 @@
     "_slug": "a$h"
   },
   {
+    "name": "Moop",
+    "image": "/images/moop_by_apender.png",
+    "author": "APender",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "addedAt": "2026-09-27T22:33:43+10:00",
+    "_slug": "apender"
+  },
+  {
     "name": "baliseal",
     "image": "/images/baliseal_by_balisong.png",
     "author": "balisong",
