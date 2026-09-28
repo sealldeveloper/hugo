@@ -80,6 +80,14 @@
     "_slug": "snowrat"
   },
   {
+    "name": "solopie",
+    "url": "https://solopie.com/",
+    "image": "/images/solopie.gif",
+    "category": "friends",
+    "order": 11,
+    "_slug": "solopie"
+  },
+  {
     "name": "warlocksmurf",
     "url": "https://warlocksmurf.github.io/",
     "image": "/images/warlocksmurf.gif",
