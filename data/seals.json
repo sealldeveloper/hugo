@@ -239,6 +239,24 @@
     "_slug": "itsironiciinsist"
   },
   {
+    "name": "salad",
+    "image": "/images/salad_by_kiirolyre.png",
+    "author": "kiirolyre",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "addedAt": "2026-10-02T00:30:38+10:00",
+    "_slug": "kiirolyre-1"
+  },
+  {
+    "name": "mcdonalds",
+    "image": "/images/mcdonalds_by_kiirolyre.png",
+    "author": "kiirolyre",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "addedAt": "2026-10-02T00:30:44+10:00",
+    "_slug": "kiirolyre-2"
+  },
+  {
     "name": "alice",
     "image": "/images/ixbixbam.png",
     "author": "Ixbixbam",
