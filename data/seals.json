@@ -575,6 +575,15 @@
     "_slug": "thesavageteddy"
   },
   {
+    "name": "0",
+    "image": "/images/0_by_tim.png",
+    "author": "Tim",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "addedAt": "2026-10-18T18:32:53+02:00",
+    "_slug": "tim"
+  },
+  {
     "name": "jim",
     "image": "/images/jim_by_toasterpwn.png",
     "author": "toasterpwn",
