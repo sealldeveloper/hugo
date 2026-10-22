@@ -320,6 +320,15 @@
     "_slug": "kmack"
   },
   {
+    "name": "Laughable Seal",
+    "image": "/images/laughableseal_by_laughablehammer.png",
+    "author": "laughablehammer",
+    "sealMarginTop": 0,
+    "flavourtext": "",
+    "addedAt": "2026-10-22T19:45:56+11:00",
+    "_slug": "laughablehammer"
+  },
+  {
     "name": "Glumbus",
     "image": "/images/glumbus_by_lena.png",
     "author": "Lena",
