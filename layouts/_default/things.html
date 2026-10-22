@@ -31,6 +31,7 @@
               </div>
               <div class="ctf-rank">
                 {{ with .australiaPlacement }}<span class="ctf-rank-pill ctf-rank-au ctf-rank-au-{{ . }}">{{ partial "au-flag.html" . }}<span>AU #{{ . }}</span></span>{{ end }}
+                {{ with .guestPlacement }}<span class="ctf-rank-pill ctf-rank-guest ctf-rank-global-{{ . }}">Guest #{{ . }}{{ with $placement.totalGuestTeams }} / {{ . }}{{ end }}</span>{{ end }}
                 <span class="ctf-rank-pill ctf-rank-global ctf-rank-global-{{ .globalPlacement }}">#{{ .globalPlacement }}{{ with .totalTeams }} / {{ . }}{{ end }}</span>
               </div>
             </article>

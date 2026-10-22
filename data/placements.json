@@ -1,5 +1,19 @@
 [
   {
+    "name": "European Cybersecurity Challenge",
+    "year": 2026,
+    "globalPlacement": 23,
+    "australiaPlacement": null,
+    "totalTeams": 42,
+    "guestPlacement": 3,
+    "totalGuestTeams": 7,
+    "teamName": "Team Australia",
+    "team": {
+      "url": "",
+      "color": "#facc15"
+    }
+  },
+  {
     "name": "UNSW SecSoc's SCONES",
     "year": 2026,
     "globalPlacement": 1,

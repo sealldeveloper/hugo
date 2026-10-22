@@ -37,6 +37,20 @@
     "_slug": "ductf"
   },
   {
+    "name": "European Cybersecurity Challenge",
+    "placements": [
+      {
+        "year": 2026,
+        "globalPlacement": 23,
+        "totalTeams": 42,
+        "guestPlacement": 3,
+        "totalGuestTeams": 7,
+        "teamName": "Team Australia"
+      }
+    ],
+    "_slug": "ecsc"
+  },
+  {
     "name": "HackTheBox Business CTF",
     "placements": [
       {
