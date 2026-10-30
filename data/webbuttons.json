@@ -94,5 +94,13 @@
     "category": "friends",
     "order": 8,
     "_slug": "warlocksmurf"
+  },
+  {
+    "name": "unvariant",
+    "url": "https://unvariant.pages.dev/",
+    "imageRemote": "https://unvariant.pages.dev/bootable.gif",
+    "category": "friends",
+    "order": 9,
+    "_slug": "unvariant"
   }
 ]
