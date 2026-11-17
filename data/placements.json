@@ -51,6 +51,17 @@
   },
   {
     "name": "BSides Canberra",
+    "year": 2026,
+    "globalPlacement": 3,
+    "australiaPlacement": null,
+    "teamName": "Emu Exploit",
+    "team": {
+      "url": "https://emu.team/",
+      "color": "#ef4444"
+    }
+  },
+  {
+    "name": "BSides Canberra",
     "year": 2025,
     "globalPlacement": 1,
     "australiaPlacement": null,
